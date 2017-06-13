@@ -8,7 +8,7 @@ import { NavItem } from './navItems';
 })
 
 export class NavbarComponent {
-  appName: string = "TV Watcher";
+  appName: string = "TV Guide";
 
   navItems: NavItem[] = [
      { routerLink: '/', label: 'Home', active: false }
