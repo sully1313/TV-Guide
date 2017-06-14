@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from './../shared/shared.module';
 
-import { FeaturedShowsComponent } from './carousel-container.component';
-import { CarouselImageComponent } from './carousel-image.component';
+import { FeaturedShowsComponent } from './featured-shows.component';
+import { ShowDetailsComponent } from './show-details.component';
 
-import { CarouselService } from './carousel.service';
+import { FeaturedService } from './featured.service';
 
 @NgModule({
   imports: [
     SharedModule
   ],
   declarations: [
-    CarouselContainerComponent,
-    CarouselImageComponent
+    FeaturedShowsComponent,
+    ShowDetailsComponent
   ],
   exports: [
-    CarouselContainerComponent,
-    CarouselImageComponent
+    FeaturedShowsComponent,
+    ShowDetailsComponent
   ],
   providers: [
-    CarouselService
+    FeaturedService
   ]
 })
 
-export class CarouselModule {}
+export class FeaturedModule {}
