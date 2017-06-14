@@ -8,8 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var app_routing_1 = require("./app.routing");
 var ui_module_1 = require("./ui/ui.module");
+var carousel_module_1 = require("./carousel/carousel.module");
+var featured_module_1 = require("./featured/featured.module");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 require("./shared/rxjs-extensions");
@@ -20,12 +23,17 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule,
+        imports: [
+            platform_browser_1.BrowserModule,
+            http_1.HttpModule,
             forms_1.FormsModule,
             app_routing_1.AppRoutingModule,
-            ui_module_1.UIModule
+            ui_module_1.UIModule,
+            carousel_module_1.CarouselModule,
+            featured_module_1.FeaturedModule
         ],
-        declarations: [app_component_1.AppComponent,
+        declarations: [
+            app_component_1.AppComponent,
             home_component_1.HomeComponent
         ],
         providers: [],

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Featured } from './featured';
+import { FeaturedService } from './featured.service';
 
 @Component({
   moduleId: module.id,
@@ -7,6 +9,25 @@ import { Component } from '@angular/core';
   styleUrls: ['styles.css']
 })
 
-export class FeaturedShowsComponent {
+export class FeaturedShowsComponent implements OnInit {
+  shows: Featured[];
+  errorMessage: string;
+
+  constructor(private _featuredService: FeaturedService) {}
+
+  ngOnInit() {
+    this.getFeaturedShows();
+  }
+
+  getFeaturedShows() {
+    this._featuredService.featuredShows()
+        .subscribe(
+          (shows: Featured[]) => {
+            console.log(shows);
+            this.shows = shows;
+          },
+          error => this.errorMessage = <any>error
+        );
+  }
 
 }

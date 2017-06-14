@@ -14,7 +14,7 @@ var SearchBarComponent = (function () {
 SearchBarComponent = __decorate([
     core_1.Component({
         selector: 'tv-search-bar',
-        template: "\n    <form class=\"form-inline float-xs-right\">\n      <input class=\"form-control\"\n                   type=\"text\"\n                   placeholder=\"Search\">\n         <button class=\"btn btn-outline-success\"\n                        type=\"submit\">Search\n              </button>\n            <form>\n  "
+        template: "\n    <form class=\"form-inline float-xs-right\">\n      <input class=\"form-control\"\n                   type=\"text\"\n                   placeholder=\"Search\">\n         <button class=\"btn btn-outline-success\"\n                        type=\"submit\">Search\n              </button>\n            </form>\n  "
     })
 ], SearchBarComponent);
 exports.SearchBarComponent = SearchBarComponent;

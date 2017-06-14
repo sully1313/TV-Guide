@@ -7,32 +7,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var shared_module_1 = require("./../shared/shared.module");
-var router_1 = require("@angular/router");
-var navbar_component_1 = require("./navbar/navbar.component");
-var search_bar_component_1 = require("./search/search-bar.component");
-var footer_component_1 = require("./footer/footer.component");
-var UIModule = (function () {
-    function UIModule() {
+var featured_shows_component_1 = require("./featured-shows.component");
+var show_details_component_1 = require("./show-details.component");
+var featured_service_1 = require("./featured.service");
+var FeaturedModule = (function () {
+    function FeaturedModule() {
     }
-    return UIModule;
+    return FeaturedModule;
 }());
-UIModule = __decorate([
+FeaturedModule = __decorate([
     core_1.NgModule({
         imports: [
-            shared_module_1.SharedModule,
-            router_1.RouterModule
+            shared_module_1.SharedModule
         ],
         declarations: [
-            navbar_component_1.NavbarComponent,
-            search_bar_component_1.SearchBarComponent,
-            footer_component_1.FooterComponent
+            featured_shows_component_1.FeaturedShowsComponent,
+            show_details_component_1.ShowDetailsComponent
         ],
         exports: [
-            navbar_component_1.NavbarComponent,
-            search_bar_component_1.SearchBarComponent,
-            footer_component_1.FooterComponent
+            featured_shows_component_1.FeaturedShowsComponent,
+            show_details_component_1.ShowDetailsComponent
+        ],
+        providers: [
+            featured_service_1.FeaturedService
         ]
     })
-], UIModule);
-exports.UIModule = UIModule;
-//# sourceMappingURL=ui.module.js.map
+], FeaturedModule);
+exports.FeaturedModule = FeaturedModule;
+//# sourceMappingURL=featured.module.js.map

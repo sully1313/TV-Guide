@@ -8,14 +8,14 @@ import { Featured } from './featured';
   template: `
     <article class="card">
     <header class="title-header">
-      <h3 class="card-title"></h3>
+      <h3 class="card-title">{{ show.name }}</h3>
     </header>
     <div class="card-block">
       <div class="img-card">
-        <img alt="Movie" class="w-100 poster"/>
+        <img [src]="show.image" alt="Movie" class="w-100 poster"/>
       </div>
-      <p class="tagline card-text text-xs-center"></p>
-      <a target="_blank" class="btn btn-primary btn-block">
+      <p class="tagline card-text text-xs-center">{{ show.network }}</p>
+      <a target="_blank" [href]="show.link" class="btn btn-primary btn-block">
         <i class="fa fa-eye"></i> Details</a>
       </div>
      </article>
@@ -23,5 +23,5 @@ import { Featured } from './featured';
 })
 
 export class ShowDetailsComponent {
-
+  @Input() show: Featured;
 }

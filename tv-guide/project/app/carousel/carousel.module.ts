@@ -4,6 +4,8 @@ import { SharedModule } from './../shared/shared.module';
 import { CarouselContainerComponent } from './carousel-container.component';
 import { CarouselImageComponent } from './carousel-image.component';
 
+import { CarouselService } from './carousel.service';
+
 @NgModule({
   imports: [
     SharedModule
@@ -15,7 +17,10 @@ import { CarouselImageComponent } from './carousel-image.component';
   exports: [
     CarouselContainerComponent,
     CarouselImageComponent
+  ],
+  providers: [
+    CarouselService
   ]
 })
 
-export class CarouselModule { }
+export class CarouselModule {}

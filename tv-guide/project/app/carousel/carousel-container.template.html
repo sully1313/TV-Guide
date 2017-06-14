@@ -7,13 +7,19 @@
 
       <!-- Indicators in Image -->
       <ol class="carousel-indicators">
-        <li data-target="#welcome-shows">
+        <li data-target="#welcome-shows"
+          *ngFor="let slide of slides; let first=first; let i = index"
+          [attr.data-slide-to]="i"
+          [ngClass]="{active: first}">
         </li>
       </ol>
 
         <!-- Image -->
         <div class="carousel-inner" role="listbox">
-          <div class="carousel-item">
+          <div class="carousel-item"
+                *ngFor="let slide of slides; let first=first"
+                [ngClass]="{active: first}">
+            <tv-carousel-image [slide]="slide"></tv-carousel-image>
           </div>
         </div>
       </div>
