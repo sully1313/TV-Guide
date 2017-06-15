@@ -23,7 +23,7 @@ ShowDetailsComponent = __decorate([
         moduleId: module.id,
         selector: 'tv-show-details',
         styleUrls: ['styles.css'],
-        template: "\n    <article class=\"card\">\n    <header class=\"title-header\">\n      <h3 class=\"card-title\">{{ show.name }}</h3>\n    </header>\n    <div class=\"card-block\">\n      <div class=\"img-card\">\n        <img [src]=\"show.image\" alt=\"Movie\" class=\"w-100 poster\"/>\n      </div>\n      <p class=\"tagline card-text text-xs-center\">{{ show.network }}</p>\n      <a target=\"_blank\" [href]=\"show.link\" class=\"btn btn-primary btn-block\">\n        <i class=\"fa fa-eye\"></i> Details</a>\n      </div>\n     </article>\n  "
+        template: "\n    <article class=\"card\">\n    <header class=\"title-header\">\n      <h3 class=\"card-title\">{{ show.name }}</h3>\n    </header>\n    <div class=\"card-block\">\n      <div class=\"img-card\">\n        <img [src]=\"show.image\" alt=\"Movie\" class=\"w-100 poster img-fluid\"/>\n      </div>\n      <p class=\"tagline card-text text-xs-center\">{{ show.network }}</p>\n      <a target=\"_blank\" [href]=\"show.link\" class=\"btn btn-primary btn-block\">\n        <i class=\"fa fa-eye\"></i> Details</a>\n      </div>\n     </article>\n  "
     })
 ], ShowDetailsComponent);
 exports.ShowDetailsComponent = ShowDetailsComponent;

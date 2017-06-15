@@ -11,7 +11,8 @@ export class NavbarComponent {
   appName: string = "TV Guide";
 
   navItems: NavItem[] = [
-     { routerLink: '/', label: 'Home', active: false }
+     { routerLink: '/', label: 'Home', active: false },
+     { routerLink: '/search', label: 'Find Shows', active: false }
    ];
 
 }

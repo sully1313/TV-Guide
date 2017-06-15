@@ -4,7 +4,7 @@ import { Carousel } from './carousel';
 @Component({
   selector: 'tv-carousel-image',
   template: `
-    <img src="{{ slide.image }}" alt="{{ slide.title }}">
+    <img src="{{ slide.image }}" alt="{{ slide.title }}" class="img-fluid">
       <div class="carousel-caption">
         <h2>{{ slide.title }}</h2>
       </div>

@@ -6,22 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var NavbarComponent = (function () {
-    function NavbarComponent() {
-        this.appName = "TV Guide";
-        this.navItems = [
-            { routerLink: '/', label: 'Home', active: false },
-            { routerLink: '/search', label: 'Find Shows', active: false }
-        ];
+var SearchComponent = (function () {
+    function SearchComponent() {
     }
-    return NavbarComponent;
+    return SearchComponent;
 }());
-NavbarComponent = __decorate([
+SearchComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'tv-navbar',
-        templateUrl: 'navbar.template.html'
+        templateUrl: 'search.template.html'
     })
-], NavbarComponent);
-exports.NavbarComponent = NavbarComponent;
-//# sourceMappingURL=navbar.component.js.map
+], SearchComponent);
+exports.SearchComponent = SearchComponent;
+//# sourceMappingURL=search.component.js.map

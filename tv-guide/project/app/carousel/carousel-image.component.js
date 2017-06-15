@@ -21,7 +21,7 @@ __decorate([
 CarouselImageComponent = __decorate([
     core_1.Component({
         selector: 'tv-carousel-image',
-        template: "\n    <img src=\"{{ slide.image }}\" alt=\"{{ slide.title }}\">\n      <div class=\"carousel-caption\">\n        <h2>{{ slide.title }}</h2>\n      </div>\n  "
+        template: "\n    <img src=\"{{ slide.image }}\" alt=\"{{ slide.title }}\" class=\"img-fluid\">\n      <div class=\"carousel-caption\">\n        <h2>{{ slide.title }}</h2>\n      </div>\n  "
     })
 ], CarouselImageComponent);
 exports.CarouselImageComponent = CarouselImageComponent;

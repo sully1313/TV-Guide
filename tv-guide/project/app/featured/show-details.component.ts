@@ -12,7 +12,7 @@ import { Featured } from './featured';
     </header>
     <div class="card-block">
       <div class="img-card">
-        <img [src]="show.image" alt="Movie" class="w-100 poster"/>
+        <img [src]="show.image" alt="Movie" class="w-100 poster img-fluid"/>
       </div>
       <p class="tagline card-text text-xs-center">{{ show.network }}</p>
       <a target="_blank" [href]="show.link" class="btn btn-primary btn-block">
