@@ -17,6 +17,7 @@ var search_module_1 = require("./search/search.module");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 require("./shared/rxjs-extensions");
+var nav_service_1 = require("./shared/nav.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36,7 +37,7 @@ AppModule = __decorate([
         declarations: [app_component_1.AppComponent,
             home_component_1.HomeComponent
         ],
-        providers: [],
+        providers: [nav_service_1.NavService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

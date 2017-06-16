@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 
 import './shared/rxjs-extensions';
 
+import  { NavService } from './shared/nav.service';
+
 @NgModule({
   imports: [ BrowserModule,
                    HttpModule,
@@ -28,7 +30,7 @@ import './shared/rxjs-extensions';
   declarations: [ AppComponent,
                           HomeComponent
                           ],
-  providers: [ ],
+  providers: [ NavService ],
   bootstrap:    [ AppComponent ]
 })
 

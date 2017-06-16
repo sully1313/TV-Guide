@@ -11,16 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var search_service_1 = require("./search.service");
+var nav_service_1 = require("../shared/nav.service");
 var SearchComponent = (function () {
-    function SearchComponent(_fb, _searchService) {
+    function SearchComponent(_fb, _searchService, _navService) {
         this._fb = _fb;
         this._searchService = _searchService;
+        this._navService = _navService;
         this.isLoading = false;
     }
     SearchComponent.prototype.ngOnInit = function () {
+        this.getQuery();
+        if (this.item) {
+            this.searchFromBar();
+        }
         this.searchForm = this._fb.group({
             query: ['', [forms_1.Validators.required, forms_1.Validators.minLength(2)]]
         });
+    };
+    SearchComponent.prototype.getQuery = function () {
+        var _this = this;
+        this.subscription = this._navService.navItem$
+            .subscribe(function (item) {
+            _this.item = item;
+        }, function (error) { return _this.errorMessage = error; });
+    };
+    SearchComponent.prototype.searchFromBar = function () {
+        var _this = this;
+        this.isLoading = true;
+        this._searchService
+            .search(this.item)
+            .subscribe(function (shows) {
+            console.log(shows);
+            _this.isLoading = false;
+            _this.shows = shows;
+        }, function (error) { return _this.errorMessage = error; });
     };
     SearchComponent.prototype.searchShows = function (_a) {
         var _this = this;
@@ -41,6 +65,10 @@ var SearchComponent = (function () {
         this.shows = null;
         this.searchForm.reset();
     };
+    SearchComponent.prototype.ngOnDestroy = function () {
+        // prevent memory leak when component is destroyed
+        this.subscription.unsubscribe();
+    };
     return SearchComponent;
 }());
 SearchComponent = __decorate([
@@ -49,7 +77,8 @@ SearchComponent = __decorate([
         templateUrl: 'search.template.html'
     }),
     __metadata("design:paramtypes", [forms_1.FormBuilder,
-        search_service_1.SearchService])
+        search_service_1.SearchService,
+        nav_service_1.NavService])
 ], SearchComponent);
 exports.SearchComponent = SearchComponent;
 //# sourceMappingURL=search.component.js.map

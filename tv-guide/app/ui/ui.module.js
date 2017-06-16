@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var shared_module_1 = require("./../shared/shared.module");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var navbar_component_1 = require("./navbar/navbar.component");
 var search_bar_component_1 = require("./search/search-bar.component");
 var footer_component_1 = require("./footer/footer.component");
@@ -20,7 +21,8 @@ UIModule = __decorate([
     core_1.NgModule({
         imports: [
             shared_module_1.SharedModule,
-            router_1.RouterModule
+            router_1.RouterModule,
+            forms_1.ReactiveFormsModule
         ],
         declarations: [
             navbar_component_1.NavbarComponent,

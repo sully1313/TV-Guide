@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var NavbarComponent = (function () {
     function NavbarComponent() {
-        this.appName = "TV Guide";
+        this.appName = "TV Watcher";
         this.navItems = [
             { routerLink: '/', label: 'Home', active: false },
             { routerLink: '/search', label: 'Find Shows', active: false }
