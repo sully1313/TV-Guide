@@ -14,6 +14,7 @@ var ui_module_1 = require("./ui/ui.module");
 var carousel_module_1 = require("./carousel/carousel.module");
 var featured_module_1 = require("./featured/featured.module");
 var search_module_1 = require("./search/search.module");
+var details_module_1 = require("./details/details.module");
 var app_component_1 = require("./app.component");
 var home_component_1 = require("./home/home.component");
 require("./shared/rxjs-extensions");
@@ -32,6 +33,7 @@ AppModule = __decorate([
             carousel_module_1.CarouselModule,
             featured_module_1.FeaturedModule,
             search_module_1.SearchModule,
+            details_module_1.DetailsModule,
             app_routing_1.AppRoutingModule,
         ],
         declarations: [app_component_1.AppComponent,
